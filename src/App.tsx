@@ -1,7 +1,7 @@
 import "./App.css";
 import { Async } from "./Async";
 
-export type employeeResponseType = {
+export type EmployeeResponseType = {
   data: EmployeeType;
 };
 
@@ -12,7 +12,7 @@ export type EmployeeType = {
 
 function assertIsEmployeeType(
   data: unknown
-): asserts data is employeeResponseType {
+): asserts data is EmployeeResponseType {
   if (typeof data != "object") {
     throw new Error("Invalid Response Type");
   }
